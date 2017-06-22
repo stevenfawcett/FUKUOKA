@@ -1,0 +1,37 @@
+<%= form_with(model: trello_card, local: true) do |form| %>
+  <% if trello_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trello_card.errors.count, "error") %> prohibited this trello_card from being saved:</h2>
+
+      <ul>
+      <% trello_card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :trello_card_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :trello_card_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priority %>
+    <%= form.text_field :priority, id: :trello_card_priority %>
+  </div>
+
+  <div class="field">
+    <%= form.label :environment %>
+    <%= form.text_field :environment, id: :trello_card_environment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

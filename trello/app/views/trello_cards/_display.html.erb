@@ -1,0 +1,32 @@
+<% provide(:title, 'Cards') %>
+<div class="center jumbotron">
+    <h1>Cards Created</h1>
+</div>
+<%= render 'filter' %>
+<div class="cards">
+        <table id="messages">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Environment</th>
+              <th>Priority</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @trello_cards.each do |trello_card| %>
+              <tr>
+                <td><%= trello_card.name %></td>
+                <td><%= trello_card.description %></td>
+                <td><%= trello_card.environment %></td>
+                <td><%= trello_card.priority %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+</div>
+<br>
+
+<%= link_to 'New Trello Card', new_trello_card_path %>
+

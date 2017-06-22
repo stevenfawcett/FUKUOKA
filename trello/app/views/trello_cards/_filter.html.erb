@@ -1,0 +1,7 @@
+<div class="btn_box">
+     <h2> Priority </h2>
+     <%= link_to 'L', show_path( priority: "Low")   , class: "btn" , id: "low"  %>
+     <%= link_to 'M', show_path( priority: "Medium"), class: "btn" , id: "medium"  %>
+     <%= link_to 'H', show_path( priority: "High")  , class: "btn" , id: "high" %>
+     <%= link_to '*', show_path()                   , class: "btn" , id: "all"  %>
+</div>

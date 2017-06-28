@@ -1,0 +1,237 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* universal */
+
+body {
+  padding-top: 60px;
+  height: 100%;
+  margin: 0;
+  overflow:auto;
+  font-family: helvetica;
+  font-weight: 100;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+      .container {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          -webkit-transition:  left 0.4s ease-in-out;
+          -moz-transition:  left 0.4s ease-in-out;
+          -ms-transition:  left 0.4s ease-in-out;
+          -o-transition:  left 0.4s ease-in-out;
+          transition:  left 0.4s ease-in-out;
+      }
+      .container.open-sidebar {
+          left: 240px;
+      }
+      
+      .swipe-area {
+          position: absolute;
+          width: 50px;
+          left: 0;
+      top: 0;
+          height: 100%;
+          background: #f3f3f3;
+          z-index: 0;
+      }
+      #sidebar {
+          background: #DF314D;
+          position: absolute;
+          width: 240px;
+          height: 100%;
+          left: -240px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+      }
+      #sidebar ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+      #sidebar ul li {
+          margin: 0;
+      }
+      #sidebar ul li a {
+          padding: 15px 20px;
+          font-size: 16px;
+          font-weight: 100;
+          color: white;
+          text-decoration: none;
+          display: block;
+          border-bottom: 1px solid #C9223D;
+          -webkit-transition:  background 0.3s ease-in-out;
+          -moz-transition:  background 0.3s ease-in-out;
+          -ms-transition:  background 0.3s ease-in-out;
+          -o-transition:  background 0.3s ease-in-out;
+          transition:  background 0.3s ease-in-out;
+      }
+      #sidebar ul li:hover a {
+          background: #C9223D;
+      }
+      .main-content {
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          position: relative;
+      }
+      .main-content .content{
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+      padding-left: 60px;
+      width: 100%;
+      }
+      .main-content .content h1{
+          font-weight: 100;
+      }
+      .main-content .content p{
+          width: 100%;
+          line-height: 160%;
+      }
+      .main-content #sidebar-toggle {
+          background: #DF314D;
+          border-radius: 3px;
+          display: block;
+          position: relative;
+          padding: 10px 7px;
+          float: left;
+      }
+      .main-content #sidebar-toggle .bar{
+           display: block;
+          width: 18px;
+          margin-bottom: 3px;
+          height: 2px;
+          background-color: #fff;
+          border-radius: 1px;   
+      }
+      .main-content #sidebar-toggle .bar:last-child{
+           margin-bottom: 0;   
+      }

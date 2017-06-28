@@ -1,0 +1,41 @@
+<div id="main-container" class="container">
+    <div class="row">
+        <div class="col-xs-2" >
+             <div  style="height: 80px ; text-align: center">
+                 <span>Priority</span><br>
+                 <%= link_to 'L', request.params.merge( :priority => "Low"   ) , class: "btn" , id: "low"  %>
+                 <%= link_to 'M', request.params.merge( :priority => "Medium") , class: "btn" , id: "medium"  %>
+                 <%= link_to 'H', request.params.merge( :priority => "High"  ) , class: "btn" , id: "high" %>
+                 <%= link_to '*', request.params.except( :priority           ) , class: "btn" , id: "all"  %>
+             </div>
+        </div>
+        <div class="col-xs-2" >
+             <div  style="height: 80px ; text-align: center">
+                 <span>Environment</span><br>
+                 <%= link_to 'D',  request.params.merge(:environment => "Development") , class: "btn" , id: "low"  %>
+                 <%= link_to 'T',  request.params.merge(:environment => "Test"       ) , class: "btn" , id: "medium"  %>
+                 <%= link_to 'P',  request.params.merge(:environment => "Production" ) , class: "btn" , id: "high" %>
+                 <%= link_to '*',  request.params.except(:environment                ) , class: "btn" , id: "all"  %>
+            </div>
+        </div>
+        <div class="col-xs-2" >
+             <div  style="height: 80px ; text-align: center">
+                 <span>Message Type</span><br>
+                 <%= link_to 'I',  request.params.merge(:message_type => "Incident") , class: "btn" , id: "low"  %>
+                 <%= link_to 'A',  request.params.merge(:message_type => "Audit"   ) , class: "btn" , id: "medium"  %>
+                 <%= link_to 'C',  request.params.merge(:message_type => "Change"  ) , class: "btn" , id: "high" %>
+                 <%= link_to '*',  request.params.except(:message_type             ) , class: "btn" , id: "all"  %>
+            </div>
+        </div>
+        <div class="col-xs-2" >
+             <div  style="height: 80px ; text-align: center">
+                 <span>When</span><br>
+                 <%= link_to 'H',  request.params.merge(:time_period => "H") , class: "btn" , id: "low"  %>
+                 <%= link_to 'D',  request.params.merge(:time_period => "D") , class: "btn" , id: "low"  %>
+                 <%= link_to 'W',  request.params.merge(:time_period => "W") , class: "btn" , id: "low"  %>
+                 <%= link_to 'M',  request.params.merge(:time_period => "M") , class: "btn" , id: "low"  %>
+                 <%= link_to '*',  request.params.except(:time_period      ) , class: "btn" , id: "all"  %>
+            </div>
+        </div>
+    </div>
+</div>

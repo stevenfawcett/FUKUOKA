@@ -1,0 +1,46 @@
+<% provide(:title, 'Cards') %>
+<div class="center jumbotron">
+    <h1>Audit</h1>
+</div>
+<%= render 'filter' %>
+
+
+<style>
+.h4  {
+    height: 50px;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #ff0000;
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2 h4"> Name </div>
+        <div class="col-xs-3 h4"> Description </div>
+        <div class="col-xs-1 h4"> Message Type </div>
+        <div class="col-xs-1 h4"> Environment </div>
+        <div class="col-xs-1 h4"> Priority </div>
+        <div class="col-xs-1 h4"> Created by User </div>
+        <div class="col-xs-1 h4"> Host </div>
+        <div class="col-xs-2 h4"> Timestamp </div>
+    </div>
+    <% @trello_cards.each do |trello_card| %>
+    <div class="row">
+        <div class="col-xs-2"> <%= trello_card.name %>       </div>
+        <div class="col-xs-3"> <%= trello_card.description%> </div>
+        <div class="col-xs-1 center"> <%= trello_card.message_type%> </div>
+        <div class="col-xs-1 center"> <%= trello_card.environment%> </div>
+        <div class="col-xs-1 center"> <%= trello_card.priority%>    </div>
+        <div class="col-xs-1 center"> <%= trello_card.username%>    </div>
+        <div class="col-xs-1 center"> <%= trello_card.hostname%>    </div>
+        <div class="col-xs-2 center"> <%= trello_card.created_at%>   </div>
+    </div>
+    <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Trello Card', new_trello_card_path %>
+

@@ -1,0 +1,92 @@
+#messages {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#messages td, #messages th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#messages tr:nth-child(even){background-color: #f2f2f2;}
+
+#messages tr:hover {background-color: #ddd;}
+
+#messages th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+#high {
+  background: #ff9834;
+  background-image: -webkit-linear-gradient(top, #ff9834, #db8029);
+  background-image: -moz-linear-gradient(top, #ff9834, #db8029);
+  background-image: -ms-linear-gradient(top, #ff9834, #db8029);
+  background-image: -o-linear-gradient(top, #ff9834, #db8029);
+  background-image: linear-gradient(to bottom, #ff9834, #db8029);
+
+}
+
+#medium {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+#low {
+  background: #34db98;
+  background-image: -webkit-linear-gradient(top, #34db98, #29b980);
+  background-image: -moz-linear-gradient(top, #34db98, #29b980);
+  background-image: -ms-linear-gradient(top, #34db98, #29b980);
+  background-image: -o-linear-gradient(top, #34db98, #29b980);
+  background-image: linear-gradient(to bottom, #34db98, #29b980);
+}
+
+#all {
+  background: #34db98;
+  background-image: -webkit-linear-gradient(top, #34db98, #29b980);
+  background-image: -moz-linear-gradient(top, #34db98, #29b980);
+  background-image: -ms-linear-gradient(top, #34db98, #29b980);
+  background-image: -o-linear-gradient(top, #34db98, #29b980);
+  background-image: linear-gradient(to bottom, #34db98, #29b980);
+}
+
+.btn_box {
+    # border:1px solid black;
+    height: 80px;
+    width: 155px;
+    padding: 0;
+    margin: 0 0 0 0;"
+}
+
+.btn_box h2 {
+    margin: 1px 0 0 1px;"
+}
